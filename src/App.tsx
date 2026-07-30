@@ -1,13 +1,16 @@
-import SectionHeading from "./components/SectionHeading"
-
+import ExperienceCard from "./components/ExperienceCard"
 function App() {
   return (
     <>
-    <SectionHeading number={'01'} title="Projects" path="~/projects" 
-    description="Designed, built and shipped end to end — each with source code and a live demo." />
-  
-    </>
+    <ExperienceCard 
+      date={"Sept. 2026 · Current position"} 
+      role={"Front-End Developer - Apprenticeship"} 
+      place={"ORIS Materials Intelligence · ConTech startup, Lyon"} 
+      description={"Building React interfaces for ORIS. SaaS tools that help reduce the carbon footprint of construction projects and data-heavy screens."} 
+      tagLabel={['React', 'TypeScript', 'Saas', 'MUI']}/>
     
+      </>
+
   )
 }
 

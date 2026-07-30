@@ -4,8 +4,6 @@ import { Typography, Button, Stack } from '@mui/material';
 import { windowShadow } from '../theme/theme';
 import StackTag from './StackTag';
 
-
-
 type ProjectCardProps = {
     kicker: string
     title: string
