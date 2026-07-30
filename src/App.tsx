@@ -1,10 +1,11 @@
-import Navbar from "./components/Navbar"
+import SectionHeading from "./components/SectionHeading"
 
 function App() {
   return (
     <>
-    <Navbar></Navbar>
-        
+    <SectionHeading number={'01'} title="Projects" path="~/projects" 
+    description="Designed, built and shipped end to end — each with source code and a live demo." />
+  
     </>
     
   )

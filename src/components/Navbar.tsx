@@ -24,32 +24,34 @@ export default function Navbar(){
                     <Typography sx={{color:'primary.main'}}>.dev</Typography>
                 </Stack>
 
-                <Stack direction="row" 
-                sx={{alignItems:'center', 
-                    display: {xs: 'none', md: 'flex'}}} 
-                    spacing={4}>
-                    
-                    {navLinks.map((linkName)=>
-                        <Link key={linkName} variant='body2' href="#" underline='none'>{linkName}</Link>
-                    )}
+                <Stack spacing={4} direction="row" sx={{alignItems:'center'}}>
+                    <Stack direction="row" 
+                    sx={{alignItems:'center', 
+                        display: {xs: 'none', md: 'flex'}}} 
+                        spacing={4}>
 
+                        {navLinks.map((linkName)=>
+                            <Link key={linkName} variant='body2' href="#" underline='none'>{linkName}</Link>
+                        )}
+                    </Stack>
                     <ToggleButtonGroup 
-                    onChange={(event, newLang) => {if (newLang !==null) setLang(newLang)}}
-                    exclusive
-                    size='small'
-                    sx={{alignItems:'center'}}
-                    value={lang}>
-                        <ToggleButton sx={{height:30, width:35}} value="fr" aria-label='Français'>FR</ToggleButton>
-                        <ToggleButton sx={{height:30, width:35}} value="en" aria-label='English'>EN</ToggleButton>
-                    </ToggleButtonGroup>
-                </Stack>
-                <IconButton
-                        onClick={(()=>setOpen(true))}
-                        sx={{display:{xs:'flex', md:'none'}}}
-                        aria-label='open menu button'
-                        >
-                        <MenuIcon />
-                    </IconButton>
+                        onChange={(event, newLang) => {if (newLang !==null) setLang(newLang)}}
+                        exclusive
+                        size='small'
+                        sx={{alignItems:'center'}}
+                        value={lang}>
+                            <ToggleButton sx={{height:30, width:35}} value="fr" aria-label='Français'>FR</ToggleButton>
+                            <ToggleButton sx={{height:30, width:35}} value="en" aria-label='English'>EN</ToggleButton>
+                        </ToggleButtonGroup>
+                    <IconButton
+                            onClick={(()=>setOpen(true))}
+                            sx={{display:{xs:'flex', md:'none'}}}
+                            aria-label='open menu button'
+                            >
+                            <MenuIcon />
+                        </IconButton>
+                    </Stack>
+                    
                     <Drawer anchor='right' open={open} onClose={(()=>setOpen(false))}>
                         <Stack spacing={2} sx={{p:3, width:200}}>
                         {navLinks.map((linkName)=>
