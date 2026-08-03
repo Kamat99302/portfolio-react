@@ -28,7 +28,7 @@ export const code = {
     filename:'#9397ab',  // profile.ts dans la barre de titre
 } as const
 
-export const fontMono = '"JetBrains Mono", monospace'
+export const fontMono = '"JetBrains", monospace'
 
 //ombres des fenêtres éditeur de code
 export const windowShadow = {

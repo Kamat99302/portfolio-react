@@ -1,16 +1,30 @@
-import ExperienceCard from "./components/ExperienceCard"
+import CodeBlock from "./components/CodeBlock"
+import { Str, Kw } from "./components/codeHelpers"
 function App() {
   return (
-    <>
-    <ExperienceCard 
-      date={"Sept. 2026 · Current position"} 
-      role={"Front-End Developer - Apprenticeship"} 
-      place={"ORIS Materials Intelligence · ConTech startup, Lyon"} 
-      description={"Building React interfaces for ORIS. SaaS tools that help reduce the carbon footprint of construction projects and data-heavy screens."} 
-      tagLabel={['React', 'TypeScript', 'Saas', 'MUI']}/>
-    
-      </>
 
+    <>
+    <CodeBlock>
+      {`{
+  "role": "front-end apprentice",
+  "company": "ORIS",
+  "period": "2026-09 → 2027-09",
+  "status": `}<Str>"current"</Str>
+      {`
+}`}
+    </CodeBlock>
+
+
+    <CodeBlock>
+          <Str>const</Str> {  `dev = {
+  stack: [`}<Kw>"React, "TypeScript"</Kw>{`],
+  i18n: [`}<Kw>"en, "fr"</Kw>{`],
+  status: `}<Kw>"open to work"</Kw>
+      {`
+} `}<Str>as const;</Str>
+    </CodeBlock>
+
+    </>
   )
 }
 
