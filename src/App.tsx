@@ -1,30 +1,19 @@
-import CodeBlock from "./components/CodeBlock"
-import { Str, Kw } from "./components/codeHelpers"
+import { Stack } from "@mui/material"
+import LearningCard from "./components/LearningCard"
+import ChallengesList from "./components/ChallengesList"
+
 function App() {
   return (
-
     <>
-    <CodeBlock>
-      {`{
-  "role": "front-end apprentice",
-  "company": "ORIS",
-  "period": "2026-09 → 2027-09",
-  "status": `}<Str>"current"</Str>
-      {`
-}`}
-    </CodeBlock>
-
-
-    <CodeBlock>
-          <Str>const</Str> {  `dev = {
-  stack: [`}<Kw>"React, "TypeScript"</Kw>{`],
-  i18n: [`}<Kw>"en, "fr"</Kw>{`],
-  status: `}<Kw>"open to work"</Kw>
-      {`
-} `}<Str>as const;</Str>
-    </CodeBlock>
-
-    </>
+    <Stack direction={'row'} spacing={2}>
+    <LearningCard kicker={"Context API"} text={"Shared global state across pages: cart, active category, derived totals — without prop drilling."}/>
+    <LearningCard kicker={"Context API"} text={"Shared global state across pages: cart, active category, derived totals — without prop drilling."}/>
+    <LearningCard kicker={"Context API"} text={"Shared global state across pages: cart, active category, derived totals — without prop drilling."}/>
+    </Stack>
+  
+  <ChallengesList challenges={["Separated data from display so translation never breaks category filtering", "Cart with Context API — add, remove, totals and tax computed as derived state"
+   ]} />
+  </>
   )
 }
 
