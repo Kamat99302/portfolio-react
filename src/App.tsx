@@ -11,7 +11,8 @@ function App() {
     <LearningCard kicker={"Context API"} text={"Shared global state across pages: cart, active category, derived totals — without prop drilling."}/>
     </Stack>
   
-  <ChallengesList challenges={["Separated data from display so translation never breaks category filtering", "Cart with Context API — add, remove, totals and tax computed as derived state"
+  <ChallengesList challenges={["Separated data from display so translation never breaks category filtering", "Cart with Context API — add, remove, totals and tax computed as derived state",
+  "Dynamic routing with React Router — product page by ID", "Wired the component library via npm instead of npm link for deployment"
    ]} />
   </>
   )
