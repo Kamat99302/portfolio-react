@@ -2,9 +2,11 @@ import { Chip } from "@mui/material"
 import { colors} from "../theme/theme"
 
 
-type StackTagProps = {
+export type StackTagVariant = 'accent' | 'neutral' | 'outline'
+
+export type StackTagProps = {
     label: string
-    variant: 'accent' | 'neutral' | 'outline'
+    variant: StackTagVariant
 }
 
 const styles = {

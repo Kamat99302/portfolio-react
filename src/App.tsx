@@ -1,19 +1,16 @@
-import { Stack } from "@mui/material"
-import LearningCard from "./components/LearningCard"
-import ChallengesList from "./components/ChallengesList"
+import CertificationCard from "./components/CertificationCard"
 
 function App() {
   return (
     <>
-    <Stack direction={'row'} spacing={2}>
-    <LearningCard kicker={"Context API"} text={"Shared global state across pages: cart, active category, derived totals — without prop drilling."}/>
-    <LearningCard kicker={"Context API"} text={"Shared global state across pages: cart, active category, derived totals — without prop drilling."}/>
-    <LearningCard kicker={"Context API"} text={"Shared global state across pages: cart, active category, derived totals — without prop drilling."}/>
-    </Stack>
-  
-  <ChallengesList challenges={["Separated data from display so translation never breaks category filtering", "Cart with Context API — add, remove, totals and tax computed as derived state",
-  "Dynamic routing with React Router — product page by ID", "Wired the component library via npm instead of npm link for deployment"
-   ]} />
+    <CertificationCard 
+      kicker="Scrimba · Dec 2025"
+      certificationTitle="Frontend Developer Career Path"
+      description="81.6 hours · 1,489 lessons. React, JavaScript, UI patterns, working with APIs."
+      status="In progress"
+      chipVariant="outline"
+      progressionBarValue={20}
+      />
   </>
   )
 }
