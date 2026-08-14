@@ -15,7 +15,7 @@ export default function SectionHeading({number, title, path, description}: Secti
             <Stack direction="row" sx={{alignItems:'baseline'}} spacing={1.8} >
                 <Typography sx={{fontFamily: fontMono, color:'primary.main',fontWeight:500, fontSize:12}}>{number}</Typography>
                 <Typography variant="h2">{title}</Typography>
-                <Typography sx={{fontFamily: fontMono ,color:colors.neutral[600], fontSize:10}} >{path}</Typography>
+                <Typography sx={{fontFamily: fontMono ,color:colors.neutral[600], fontSize:12}} >{path}</Typography>
             </Stack>
             {description && 
                     <Typography sx={{color:colors.neutral[500], fontSize:14}}>

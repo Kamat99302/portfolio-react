@@ -9,7 +9,7 @@ type CodeBlockProps = {
 export default function CodeBlock({children}:CodeBlockProps){
 
     return(
-     <Typography sx={{fontFamily:fontMono, color:colors.neutral}} component="pre">
+     <Typography sx={{fontFamily:fontMono, color:colors.neutral, overflowX: "auto"}} component="pre">
         {children}
      </Typography>
      

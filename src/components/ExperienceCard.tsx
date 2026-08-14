@@ -13,7 +13,7 @@ type ExperienceCardProps = {
 
 export default function ExperienceCard({date, title, place, description, tagLabel, variant}: ExperienceCardProps){
     return(
-        <Card sx={{boxShadow:windowShadow.simple, overflow:'hidden'}}>
+        <Card sx={{boxShadow:windowShadow.simple, overflow:'hidden', maxWidth: {xs:500, md:"100%"}}}>
             <Stack spacing={1} sx={{p:1.5}}>
                 <Typography sx={{color:'primary.main'}} variant='caption'>{date}</Typography>
                 <Typography variant='h4'>{title}</Typography>
