@@ -1,8 +1,8 @@
-import Contact from "./sections/Contact"
+import Skills from "./sections/Skills"
 function App() {
   return (
     <>
-    <Contact />
+    <Skills/>
     
   </>
   )
