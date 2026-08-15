@@ -5,8 +5,6 @@ import EditorWindow from "../components/EditorWindow"
 import { Str } from "../components/codeHelpers"
 import { Grid, Container } from "@mui/material"
 
-
-
 export default function Experience(){
     return(
         <Container maxWidth="lg">

@@ -1,4 +1,4 @@
-import { Card, Stack, Typography} from "@mui/material"
+import { Card, Stack, Typography, Box} from "@mui/material"
 import { colors, fontMono, windowShadow } from "../theme/theme"
 import StackTag from "./StackTag";
 import type { StackTagVariant } from "./StackTag";
@@ -16,8 +16,8 @@ type CertificationCardProps = {
 
 export default function CertificationCard({kicker, certificationTitle, description, status, chipVariant, progressionBarValue}: CertificationCardProps){
     return(
-        <Card sx={{boxShadow:windowShadow.simple, overflow:'hidden'}}>
-            <Stack spacing={1} sx={{p:1.5}}>
+        <Card sx={{boxShadow:windowShadow.simple, overflow:'hidden', height:"100%"}}>
+            <Stack spacing={0.3 } sx={{p:1.2, height:"100%"}}>
                 <Typography sx={{color:'primary.main'}} variant='caption'>{kicker}</Typography>
                 <Typography variant='h4'>{certificationTitle}</Typography>
                 <Typography variant="body2" sx={{color:colors.neutral[300]}}>{description}</Typography> 
@@ -27,6 +27,7 @@ export default function CertificationCard({kicker, certificationTitle, descripti
                         <Typography sx={{fontFamily: fontMono, fontSize:12, color: colors.neutral[400]}}>{progressionBarValue}%</Typography>
                     </Stack>
                 }
+                <Box sx={{flexGrow:1}}/>
                 <Stack direction={"row"}  spacing={1}>
                     <StackTag label={status} variant={chipVariant}/>
                 </Stack>

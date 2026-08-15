@@ -1,9 +1,9 @@
-import Experience from "./sections/Experience"
+import Education from "./sections/Education"
 function App() {
   return (
     <>
-    <Experience />
-      
+    <Education />
+    
   </>
   )
 }
