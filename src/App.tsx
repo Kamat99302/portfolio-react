@@ -1,8 +1,8 @@
-import Education from "./sections/Education"
+import Contact from "./sections/Contact"
 function App() {
   return (
     <>
-    <Education />
+    <Contact />
     
   </>
   )
