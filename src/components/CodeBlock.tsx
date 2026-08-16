@@ -8,8 +8,8 @@ type CodeBlockProps = {
 
 export default function CodeBlock({children}:CodeBlockProps){
 
-    return(
-     <Typography sx={{fontFamily:fontMono, color:colors.neutral, overflowX: "auto"}} component="pre">
+    return( 
+     <Typography sx={{fontFamily:fontMono, fontSize:12.5, color:colors.neutral, overflowX: "auto"}} component="pre">
         {children}
      </Typography>
      
