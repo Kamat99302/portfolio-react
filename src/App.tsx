@@ -1,8 +1,8 @@
-import About from "./sections/About"
+import Work from "./sections/Work"
 function App() {
   return (
     <>
-    <About/>
+    <Work/>
     
   </>
   )

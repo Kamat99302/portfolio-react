@@ -20,8 +20,8 @@ type ProjectCardProps = {
 export default function ProjectCard({kicker, title, description, tags, image, imageAlt, caseStudyTo, codeHref, demoHref}: ProjectCardProps){
     return(
         <Card sx={{display:'flex', flexDirection:{xs: 'column', md: 'row'}, boxShadow:windowShadow.simple, overflow:'hidden'}}>
-            <Box sx={{ margin:1, borderRadius:1, backgroundColor: 'darkgrey' ,width: {xs: '100%', md:230}}} component="img" src={image} alt={imageAlt}></Box>
-            <Stack spacing={1.5} sx={{p:2.25}}>
+            <Box sx={{ margin:3, borderRadius:1, width: {xs: '85%', md:310}, maxHeight: { xs: 260, md: 'none' }, objectFit: 'contain', }} component="img" src={image} alt={imageAlt}></Box>
+            <Stack spacing={1.3} sx={{p:2.25}}>
                 <Typography sx={{color:'primary.main'}} variant='caption'>{kicker}</Typography>
                 <Typography variant='h4'>{title}</Typography>
                 <Typography>{description}</Typography>
