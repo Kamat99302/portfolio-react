@@ -1,8 +1,8 @@
-import Work from "./sections/Work"
+import Hero from "./sections/Hero"
 function App() {
   return (
     <>
-    <Work/>
+    <Hero/>
     
   </>
   )
