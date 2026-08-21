@@ -11,12 +11,22 @@ export default function Navbar(){
     const [lang, setLang] = useState<'fr'|'en'>('en')
     const [open, setOpen] = useState(false)
 
-    const navLinks = ['Projects', 'About', 'Skills', 'Contact']
+    const navLinks = [
+        {label: "Work", href: "#work"},
+        {label: "About", href: "#about"},
+        {label: "Skills", href: "#skills"},
+        {label: "Contact", href: "#contact"},
+    ]
 
  
     
     return(
-        <AppBar position='sticky' color='transparent' elevation={0}>
+        <AppBar 
+            position='sticky' 
+            color='transparent' 
+            elevation={0}
+            sx={{ backdropFilter: 'blur(8px)',
+                backgroundColor: 'rgba(22, 24, 38, 0.7)',}}>
             <Toolbar sx={{justifyContent:'space-between'}}>
                 <Stack direction="row" sx={{alignItems:'center'}}>
                     <Avatar sx={{mr:1.5}} alt='Matt Picture' src={matt}/>
@@ -30,8 +40,8 @@ export default function Navbar(){
                         display: {xs: 'none', md: 'flex'}}} 
                         spacing={4}>
 
-                        {navLinks.map((linkName)=>
-                            <Link key={linkName} variant='body2' href="#" underline='none'>{linkName}</Link>
+                        {navLinks.map((link)=>
+                            <Link key={link.label} variant='body2' href={link.href} underline='none'>{link.label}</Link>
                         )}
                     </Stack>
                     <ToggleButtonGroup 
@@ -54,8 +64,8 @@ export default function Navbar(){
                     
                     <Drawer anchor='right' open={open} onClose={(()=>setOpen(false))}>
                         <Stack spacing={2} sx={{p:3, width:200}}>
-                        {navLinks.map((linkName)=>
-                        <Link key={linkName} variant='body2' href="#" underline='none' onClick={(()=>setOpen(false))}>{linkName}</Link>
+                        {navLinks.map((link)=>
+                        <Link key={link.label} variant='body2' href={link.href} underline='none' onClick={(()=>setOpen(false))}>{link.label}</Link>
                     )}
                         </Stack>
                     </Drawer>

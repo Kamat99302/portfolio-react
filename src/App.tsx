@@ -1,8 +1,9 @@
-import Hero from "./sections/Hero"
+import Home from "./pages/Home"
+import Footer from "./components/Footer"
 function App() {
   return (
     <>
-    <Hero/>
+    <Home/>
     
   </>
   )

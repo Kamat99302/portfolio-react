@@ -13,7 +13,7 @@ export default function Work(){
                             kicker="2026 · React app"
                             title={`Matt's Diner`}
                             description="Kiosk ordering app consuming my npm component library. Dynamic routing, cart with Context API, FR/EN with react-i18next."
-                            tags={["React", "Typescript", "Context API", "i18next"]}
+                            tags={["React", "TypeScript", "Context API", "i18next"]}
                             image={mattsDiner}
                             imageAlt="matts dinner screenshot"
                             caseStudyTo="blank"
