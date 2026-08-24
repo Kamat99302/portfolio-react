@@ -1,9 +1,10 @@
-import Home from "./pages/Home"
-import Footer from "./components/Footer"
+import MattsDiner from "./pages/MattsDiner"
+
 function App() {
   return (
     <>
-    <Home/>
+    <MattsDiner/>
+    
     
   </>
   )
