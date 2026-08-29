@@ -7,7 +7,7 @@ export default function Contact(){
     const buttonSx = { py: 0.05, px: 1.1, fontSize: 13 }
     return(
         <Container maxWidth="lg">
-            <SectionHeading number="06" title="Contact" path="~/contact"/>
+            <SectionHeading size="large" number="06" title="Contact" path="~/contact"/>
             <EditorWindow  title="terminal" sx={{maxWidth:"640px", mt:2}}>
             <Mark>$</Mark> Got a project in mind? Let's talk.  EN or FR
             <Box

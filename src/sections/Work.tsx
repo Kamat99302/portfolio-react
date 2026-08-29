@@ -7,7 +7,7 @@ import componentLibrary from "../img/storyB.gif"
 export default function Work(){
     return(
         <Container maxWidth="lg">
-            <SectionHeading number="01" title="Work" path="~/work" description="Personal projects - designed, built and shipped end to end." />
+            <SectionHeading size="large" number="01" title="Work" path="~/work" description="Personal projects - designed, built and shipped end to end." />
                     <Stack direction={"column"} sx={{ mt: 3 }} spacing={2}>
                         <ProjectCard
                             kicker="2026 · React app"

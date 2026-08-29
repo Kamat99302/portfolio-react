@@ -13,7 +13,7 @@ export default function Hero(){
     const buttonSxXs = { py: 0.4, px: 1.1, fontSize: 13 }
     return(
         <Container maxWidth="lg">
-            <Grid sx={{mt:3}} container spacing={4}>
+            <Grid sx={{mt:5}} container spacing={4}>
                 <Grid size={{xs:12, md:7}}>
                     <Stack direction={"column"} spacing={2}>
                         <Typography sx={{color:"primary.main"}} variant="caption">Front-end developer · ORIS</Typography>

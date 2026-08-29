@@ -8,7 +8,7 @@ import { Grid, Container } from "@mui/material"
 export default function Experience(){
     return(
         <Container maxWidth="lg">
-            <SectionHeading number="04" title="Experience" path="~/experience" />
+            <SectionHeading size="large" number="04" title="Experience" path="~/experience" />
             <Grid sx={{mt:3}} container spacing={3}>
                 <Grid size={{xs:12, md:8}}>
                     <ExperienceCard 

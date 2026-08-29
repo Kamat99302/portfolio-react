@@ -10,7 +10,7 @@ export default function About(){
     const typoSx = {fontSize:14, color:colors.neutral[300]}
     return(
         <Container maxWidth="lg">
-            <SectionHeading number="02" title="About" path="~/about"/>
+            <SectionHeading size="large" number="02" title="About" path="~/about"/>
             <Grid sx={{mt:3}} container spacing={3}>
                 <Grid size={{xs:12, md:3}}>
                     <EditorWindow title="matthieu.jpg" sx={{ maxWidth: { xs: 320, md: '100%' }, mx: 'auto' }}>
@@ -25,7 +25,7 @@ export default function About(){
                     <EditorWindow title="README.md">
                         <Stack spacing={1.5} sx={{p:1}}>
                             <Typography sx={typoSx}>After 15 months of humanitarian work across Asia (Singapore, Indonesia), I committed fully to web development. Scrimba's
-                                Frontend Developer Path, then a front-end role (apprenticeship) at <Link href="https://www.oris-connect.com/en/" target="_blank">ORIS </Link>while completing my Bachelor's in application development.
+                                Frontend Developer Path, then a front-end role at <Link href="https://www.oris-connect.com/en/" target="_blank">ORIS </Link>while completing my Bachelor's in application development.
                             </Typography>
                             <Typography sx={typoSx}>Working abroad taught me adaptability, perseverance and teamwork - in English, every day. I bring the same into every codebase.</Typography>
                         </Stack>    

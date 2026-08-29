@@ -5,17 +5,22 @@ import { colors } from "../theme/theme"
 type SectionHeadingProps = {
     number: string
     title: string
-    path: string
+    path?: string
     description?: string
+    size: "small" | "large"
+   
 }
 
-export default function SectionHeading({number, title, path, description}: SectionHeadingProps){
+export default function SectionHeading({number, title, path, description, size}: SectionHeadingProps){
     return(
         <Stack spacing={0.5}>
             <Stack direction="row" sx={{alignItems:'baseline'}} spacing={1.8} >
                 <Typography sx={{fontFamily: fontMono, color:'primary.main',fontWeight:500, fontSize:12}}>{number}</Typography>
-                <Typography variant="h2">{title}</Typography>
-                <Typography sx={{fontFamily: fontMono ,color:colors.neutral[600], fontSize:12}} >{path}</Typography>
+                <Typography variant={size === "large"? "h2" : "h3"}>{title}</Typography>
+                {path && 
+                    <Typography sx={{fontFamily: fontMono ,color:colors.neutral[600], fontSize:12}} >{path}</Typography>
+                }
+                
             </Stack>
             {description && 
                     <Typography sx={{color:colors.neutral[500], fontSize:14}}>

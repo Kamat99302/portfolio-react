@@ -7,7 +7,7 @@ export default function Skills(){
     
     return(
         <Container maxWidth="lg">
-            <SectionHeading number="03" title="Skills" path="~/skills"/>
+            <SectionHeading size="large" number="03" title="Skills" path="~/skills"/>
             <Grid sx={{mt:3}} container spacing={5}>
                 <Grid size={gridSx}>
                     <SkillGroup 
