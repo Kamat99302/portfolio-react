@@ -1,9 +1,10 @@
 import MattsDiner from "./pages/MattsDiner"
 import Home from "./pages/Home"
+import ComponentLibrary from "./pages/ComponentLibrary"
 function App() {
   return (
     <>
-    <MattsDiner/>
+    <ComponentLibrary/>
     
     
   </>
