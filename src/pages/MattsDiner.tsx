@@ -1,12 +1,15 @@
 import Navbar from "../components/Navbar"
-import { Stack, Typography, Container, Box, Button } from "@mui/material"
+import { Stack, Typography, Container, Box, Button, Grid } from "@mui/material"
 import { fontMono, colors } from "../theme/theme"
 import mattsDiner from "../img/mattsdiner.png"
 import SectionHeading from "../components/SectionHeading"
 import EditorWindow from "../components/EditorWindow"
 import CodeBlock from "../components/CodeBlock"
-import { Kw, Mark } from "../components/codeHelpers"
+import { Kw, Mark, Comments } from "../components/codeHelpers"
 import ChallengesList from "../components/ChallengesList"
+import LearningCard from "../components/LearningCard"
+import StackTag from "../components/StackTag"
+import {Divider} from "@mui/material"
 
 export default function MattsDiner(){
     const buttonSx = { py: 0.05, px: 1.1, fontSize: 13 }
@@ -40,7 +43,7 @@ export default function MattsDiner(){
                 </EditorWindow>
             </Stack>
 
-            <Stack spacing={1.2} sx={{mt:4}}>
+            <Stack spacing={1.2} sx={{mt:5, mb:3}}>
             <SectionHeading size="small" number="02" title="Technical challenges solved" />
             <ChallengesList challenges={[
                 "Kept data keys separate from display strings so switching language never breaks category filtering",
@@ -50,7 +53,53 @@ export default function MattsDiner(){
                 "Scaled the 1080×1920 kiosk layout to any screen with dynamic scaling"
                 ]} />
             </Stack>
-            
+
+            <SectionHeading size="small" number="03" title="Learnings" />
+            <Grid sx={{mt:2}} container spacing={3} >
+                <Grid size ={{xs:12, md:4}}>
+                    <LearningCard kicker="State management" text="Shared global state across pages: cart, active category, derived totals, without prop drilling." />
+                </Grid>
+                <Grid size ={{xs:12, md:4}}>
+                    <LearningCard kicker="Library lifecycle" text="Publishing, versioning and installing my own package with the same workflow as any npm dependency." />
+                </Grid>
+                <Grid size ={{xs:12, md:4}}>
+                    <LearningCard kicker="Internationalization" text="Structuring translation keys so the UI can switch language instantly, without touching the underlying data." />
+                </Grid>
+            </Grid>
+
+            <Stack sx={{mt:4, mb:4}} spacing={2}>
+                <SectionHeading title="Next Goal" size="small" number="04" />
+                <EditorWindow sx={{maxWidth:{xs: "100%", md:"85%"}}} title="roadmap.todo">
+                    <Box sx={{py:0.5}}>
+                    <CodeBlock >                                             
+                        <Mark>// TODO:</Mark> {`serve the menu from a Node.js + Express REST API`} 
+                        {"\n"}
+                        <Mark>// TODO:</Mark> {`persist orders in a database`}
+                        {"\n"}
+                        <Comments>// goal: turn Matt's Diner into a complete full-stack app</Comments>            
+                    </CodeBlock>
+                    </Box>
+                </EditorWindow>
+            </Stack>
+            <SectionHeading size="small" number="05" title="Toolbox" />
+            <Box sx={{mt:2}}>
+                <Stack direction={"row"} sx={{flexWrap:"wrap", gap:1}}>
+                    <StackTag variant="neutral" label="React"/>
+                    <StackTag variant="neutral" label="TypeScript"/>
+                    <StackTag variant="neutral" label="Context API"/>
+                    <StackTag variant="neutral" label="React Router"/>
+                    <StackTag variant="neutral" label="react-i18next"/>
+                    <StackTag variant="neutral" label="Vite"/>
+                    <StackTag variant="neutral" label="npm"/>
+                </Stack>
+            </Box>
+            <Box sx={{mt:6}}>
+                <Divider sx={{border: 'none',height: '1px', background: `linear-gradient(to right, transparent, ${colors.divider} 48px, ${colors.divider} calc(100% - 48px), transparent)`}} />
+                <Stack sx={{justifyContent:"space-between", mt:2, alignItems: {xs:'center', md:'stretch'}, gap: { xs: 1, md: 0 },}} direction={{xs:"column", md:"row"}}>
+                    <Button href={""} variant="text">← All projects</Button>
+                    <Button href={""} variant="text">Next: Component Library →</Button>
+                </Stack>
+            </Box>
             </Container>
         </>
     )
