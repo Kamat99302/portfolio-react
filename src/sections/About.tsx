@@ -27,7 +27,7 @@ export default function About(){
                             <Typography sx={typoSx}>After 15 months of humanitarian work across Asia (Singapore, Indonesia), I committed fully to web development. Scrimba's
                                 Frontend Developer Path, then a front-end role at <Link href="https://www.oris-connect.com/en/" target="_blank">ORIS </Link>while completing my Bachelor's in application development.
                             </Typography>
-                            <Typography sx={typoSx}>Working abroad taught me adaptability, perseverance and teamwork - in English, every day. I bring the same into every codebase.</Typography>
+                            <Typography sx={typoSx}>Working abroad taught me adaptability, perseverance and teamwork. I bring the same into every codebase.</Typography>
                         </Stack>    
                         
                     

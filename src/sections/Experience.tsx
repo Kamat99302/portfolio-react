@@ -13,7 +13,7 @@ export default function Experience(){
                 <Grid size={{xs:12, md:8}}>
                     <ExperienceCard 
                         date="Sept. 2026 – Sept. 2027 · Starting September"
-                        title="Front-End Developer - Apprenticeship"
+                        title="Front-End Developer"
                         place="ORIS Materials Intelligence · ConTech startup, Lyon, France"
                         description="Building React interfaces for ORIS's SaaS tools that help reduce the carbon footprint of construction projects. Data-heavy screens, reusable components, real product constraints."
                         tagLabel={["React", "TypeScript", "SaaS", "Agile team"]}
