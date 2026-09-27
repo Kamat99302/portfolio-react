@@ -45,7 +45,7 @@ export default function Navbar(){
                                 component={RouterLink} 
                                 key={link.label} 
                                 variant='body2' 
-                                to={link.href} 
+                                to={'/'+link.href} 
                                 underline='none'
                                 >
                                     {link.label}
@@ -77,7 +77,7 @@ export default function Navbar(){
                             component={RouterLink} 
                             key={link.label} 
                             variant='body2' 
-                            to={link.href} 
+                            to={'/'+link.href} 
                             underline='none' 
                             onClick={(()=>setOpen(false))}
                             >
