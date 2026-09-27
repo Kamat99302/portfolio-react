@@ -53,7 +53,7 @@ export default function Navbar(){
                         )}
                     </Stack>
                     <ToggleButtonGroup 
-                        onChange={(event, newLang) => {if (newLang !==null) setLang(newLang)}}
+                        onChange={(_event, newLang) => {if (newLang !==null) setLang(newLang)}}
                         exclusive
                         size='small'
                         sx={{alignItems:'center'}}
