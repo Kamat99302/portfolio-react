@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Typography, Button, Stack } from '@mui/material';
 import { windowShadow } from '../theme/theme';
 import StackTag from './StackTag';
+import { Link } from 'react-router-dom'
 
 type ProjectCardProps = {
     kicker: string
@@ -29,7 +30,7 @@ export default function ProjectCard({kicker, title, description, tags, image, im
                     { tags.map((tag)=><StackTag key={tag} label={tag} variant='neutral'/>) }
                 </Stack>
                 <Stack direction="row" spacing={1}>
-                    <Button href={caseStudyTo} variant="text">Case study →</Button>
+                    <Button component={Link} to={caseStudyTo} variant="text">Case study →</Button>
                     <Button href={codeHref} variant="text">Code</Button>
                     <Button href={demoHref} variant="text">Live demo</Button>
                 </Stack>

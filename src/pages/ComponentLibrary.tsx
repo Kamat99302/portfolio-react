@@ -10,6 +10,7 @@ import ChallengesList from "../components/ChallengesList"
 import LearningCard from "../components/LearningCard"
 import StackTag from "../components/StackTag"
 import {Divider} from "@mui/material"
+import { Link as RouterLink} from 'react-router-dom'
 
 export default function ComponentLibrary(){
     const buttonSx = { py: 0.05, px: 1.1, fontSize: 13 }
@@ -30,7 +31,7 @@ export default function ComponentLibrary(){
                     </Stack>
                 </Stack>    
             </Box>
-            <Box sx={{ mt:4,  borderRadius:2, width: '100%'}} component="img" src={storyB} alt="matts diner screenshot" />
+            <Box sx={{ mt:4,  borderRadius:2, width: '100%'}} component="img" src={storyB} alt="component library" />
             <Stack sx={{mt:3}} spacing={2}>
                 <SectionHeading size="small" number="01" title="Architecture" />
                 <Typography sx={{fontSize:15, color:colors.neutral[300]}}>Each component is fully driven by props. No hardcoded content, no internal data fetching. Variants (size, state, color) are passed as
@@ -69,7 +70,7 @@ export default function ComponentLibrary(){
                     <LearningCard kicker="Library tooling" text="Understood the difference between building an app and building a package: entry points, peer dependencies, etc." />
                 </Grid>
                 <Grid size ={{xs:12, md:4}}>
-                    <LearningCard kicker="Storybook " text="Developing a component in isolation surfaces edge cases the app would hide." />
+                    <LearningCard kicker="Storybook" text="Developing a component in isolation surfaces edge cases the app would hide." />
                 </Grid>
             </Grid>
 
@@ -94,7 +95,7 @@ export default function ComponentLibrary(){
                 <Stack direction={"row"} sx={{flexWrap:"wrap", gap:1}}>
                     <StackTag variant="neutral" label="React"/>
                     <StackTag variant="neutral" label="JavaScript"/>
-                    <StackTag variant="neutral" label="Storybook "/>
+                    <StackTag variant="neutral" label="Storybook"/>
                     <StackTag variant="neutral" label="Vite"/>
                     <StackTag variant="neutral" label="npm"/>
                 </Stack>
@@ -102,7 +103,7 @@ export default function ComponentLibrary(){
             <Box sx={{mt:6}}>
                 <Divider sx={{border: 'none',height: '1px', background: `linear-gradient(to right, transparent, ${colors.divider} 48px, ${colors.divider} calc(100% - 48px), transparent)`}} />
                 <Stack sx={{justifyContent:"space-between", mt:2, alignItems: {xs:'center', md:'stretch'}, gap: { xs: 1, md: 0 },}} direction={{xs:"column", md:"row"}}>
-                    <Button href={""} variant="text">← All projects</Button>
+                    <Button component={RouterLink} to="/#work" variant="text">← All projects</Button>
                 </Stack>
             </Box>
             </Container>

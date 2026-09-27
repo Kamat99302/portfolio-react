@@ -5,6 +5,8 @@ import { Avatar, Link, Stack, ToggleButtonGroup, ToggleButton, IconButton, Drawe
 import MenuIcon from '@mui/icons-material/Menu';
 import matt from '../img/matt.jpg'
 import { useState } from 'react';
+import { Link as RouterLink} from 'react-router-dom'
+
 
 
 export default function Navbar(){
@@ -17,9 +19,7 @@ export default function Navbar(){
         {label: "Skills", href: "#skills"},
         {label: "Contact", href: "#contact"},
     ]
-
- 
-    
+   
     return(
         <AppBar 
             position='sticky' 
@@ -41,7 +41,15 @@ export default function Navbar(){
                         spacing={4}>
 
                         {navLinks.map((link)=>
-                            <Link key={link.label} variant='body2' href={link.href} underline='none'>{link.label}</Link>
+                            <Link 
+                                component={RouterLink} 
+                                key={link.label} 
+                                variant='body2' 
+                                to={link.href} 
+                                underline='none'
+                                >
+                                    {link.label}
+                                    </Link>
                         )}
                     </Stack>
                     <ToggleButtonGroup 
@@ -65,7 +73,16 @@ export default function Navbar(){
                     <Drawer anchor='right' open={open} onClose={(()=>setOpen(false))}>
                         <Stack spacing={2} sx={{p:3, width:200}}>
                         {navLinks.map((link)=>
-                        <Link key={link.label} variant='body2' href={link.href} underline='none' onClick={(()=>setOpen(false))}>{link.label}</Link>
+                        <Link 
+                            component={RouterLink} 
+                            key={link.label} 
+                            variant='body2' 
+                            to={link.href} 
+                            underline='none' 
+                            onClick={(()=>setOpen(false))}
+                            >
+                                {link.label}
+                                </Link>
                     )}
                         </Stack>
                     </Drawer>

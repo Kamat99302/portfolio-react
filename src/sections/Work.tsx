@@ -3,7 +3,6 @@ import ProjectCard from "../components/ProjectCard"
 import SectionHeading from "../components/SectionHeading"
 import mattsDiner from "../img/mattsdiner.png"
 import componentLibrary from "../img/storyB.gif"
-
 export default function Work(){
     return(
         <Container maxWidth="lg">
@@ -16,7 +15,7 @@ export default function Work(){
                             tags={["React", "TypeScript", "Context API", "i18next"]}
                             image={mattsDiner}
                             imageAlt="matts dinner screenshot"
-                            caseStudyTo="blank"
+                            caseStudyTo="/matts-diner"
                             codeHref="https://github.com/Kamat99302/matts-dinner"
                             demoHref="https://matts-dinner.netlify.app/" />
 
@@ -27,7 +26,7 @@ export default function Work(){
                             tags={["React", "Storybook", "npm"]}
                             image={componentLibrary}
                             imageAlt="story book screenshot"
-                            caseStudyTo="blank"
+                            caseStudyTo="/component-library"
                             codeHref="https://github.com/Kamat99302/Matt-s-Dinner-Component-Library"
                             demoHref="https://component-library-mattsdinner.netlify.app" />
                     </Stack>
