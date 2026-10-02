@@ -12,7 +12,7 @@ export default function Experience(){
             <Grid sx={{mt:3}} container spacing={3}>
                 <Grid size={{xs:12, md:8}}>
                     <ExperienceCard 
-                        date="Sept. 2026 – Sept. 2027 · Starting September"
+                        date="Sept. 2026 – Sept. 2027"
                         title="Front-End Developer"
                         place="ORIS Materials Intelligence · ConTech startup, Lyon, France"
                         description="Building React interfaces for ORIS's SaaS tools that help reduce the carbon footprint of construction projects. Data-heavy screens, reusable components, real product constraints."
@@ -28,7 +28,7 @@ export default function Experience(){
     "role": "front-end apprentice",
     "company": "ORIS",
     "period": "2026-09 → 2027-09",
-    "status": `}<Str>"starting September"</Str>
+    "status": `}<Str>"Ongoing"</Str>
                             {`
 }`}
                         </CodeBlock>

@@ -38,7 +38,7 @@ export default function MattsDiner(){
                 <Typography sx={{fontSize:15, color:colors.neutral[300]}}>The app pulls my component library from npm and keeps it purely presentational: state lives in Context API, translations in react-i18next, and the library receives everything through props.</Typography>
                 <EditorWindow sx={{maxWidth:{xs: "100%", md:"85%" }}} title="App.tsx">
                     <CodeBlock>                                             
-                        <Mark>import</Mark> {`{ Button, CartItemCard }`} <Mark>from</Mark> <Kw>"matts-dinner-component-library"{`;`}</Kw>
+                        <Mark>import</Mark> {`{ Button, CartItemCard }`} <Mark>from</Mark> <Kw>"matts-diner-component-library"{`;`}</Kw>
                         {"\n"}
                         <Mark>import</Mark> {`{ useCart }`} <Mark>from</Mark> <Kw>"../Context/CartContext"{`;`}</Kw>                       
                          </CodeBlock>
